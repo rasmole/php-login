@@ -4,7 +4,7 @@ This is a very a small application presenting an extremely-simple-and-almost-unr
 
 ## Starting up the application
 
-To build and run the Docker image, you need to type:
+To build and run the Docker container, you need to type:
 
 	docker-compose build
   
