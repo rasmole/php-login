@@ -10,11 +10,11 @@ require 'database.php';
 
 if(!empty($_POST['email']) && !empty($_POST['password'])):
 	
-	$email = $_POST['email'];
-	$pass = $_POST['password'];
-
-	$query="SELECT id, email, password FROM users WHERE email = '".$email."' and password = '".$pass."'";
+	$email = $_POST['email']; # Need input validation
+	$pass = $_POST['password']; # Need input validation
 	
+	$query="SELECT id, email, password FROM users WHERE email = '".$email."' and password = '".$pass."'";
+		
 	$records = $conn->prepare($query);
 	$records->execute();
 	$results = $records->fetch(PDO::FETCH_ASSOC);
